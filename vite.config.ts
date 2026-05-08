@@ -9,7 +9,7 @@ export default defineConfig({
     tsConfigPaths(),
     tailwindcss(),
     tanstackStart({
-      target: "netlify",
+      target: "cloudflare"
       customViteReactPlugin: true,
       server: { entry: "./src/server.ts" },
     }),

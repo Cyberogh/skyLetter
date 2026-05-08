@@ -9,14 +9,24 @@ export default defineConfig({
     tsConfigPaths(),
     tailwindcss(),
     tanstackStart({
-      target: "cloudflare"
+      target: "cloudflare",
       customViteReactPlugin: true,
-      server: { entry: "./src/server.ts" },
+      server: {
+        entry: "./src/server.ts",
+      },
     }),
     viteReact(),
   ],
+
   resolve: {
-    alias: { "@": "/src" },
-    dedupe: ["react", "react-dom", "@tanstack/react-router"],
+    alias: {
+      "@": "/src",
+    },
+
+    dedupe: [
+      "react",
+      "react-dom",
+      "@tanstack/react-router",
+    ],
   },
 });
